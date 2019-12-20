@@ -1,5 +1,5 @@
-package jp.co.myapp.useCases.user.create;
+package jp.co.myapp.usecases.user.create;
 
 public interface IUserCreateUseCase {
-	public void handle(UserCreateInputData inputData) ;
+	public void handle(UserCreateInputData inputData);
 }

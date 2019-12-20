@@ -1,25 +1,54 @@
-import jp.co.myapp.infra.ui.UserCreateConsoleView;
-import jp.co.myapp.interfaces.controllers.UserController;
-import jp.co.myapp.interfaces.gateways.IUserCreateView;
-import jp.co.myapp.interfaces.gateways.UserCreateViewModel;
-import jp.co.myapp.interfaces.gateways.UserRepository;
-import jp.co.myapp.interfaces.presentation.user.UserCreatePresentor;
-import jp.co.myapp.useCases.user.create.IUserCreateUseCase;
-import jp.co.myapp.useCases.user.create.UserCreateUseCaseInteractor;
+import jp.co.myapp.infra.ui.user.create.UserCreateConsoleView;
+import jp.co.myapp.infra.ui.volume.create.VolumeCreateHTMLView;
+import jp.co.myapp.interfaces.controllers.user.UserController;
+import jp.co.myapp.interfaces.controllers.volume.VolumeController;
+import jp.co.myapp.interfaces.gateways.user.UserRepository;
+import jp.co.myapp.interfaces.gateways.user.create.IUserCreateView;
+import jp.co.myapp.interfaces.gateways.user.create.IUserCreateViewModel;
+import jp.co.myapp.interfaces.gateways.user.create.UserCreateViewModel;
+import jp.co.myapp.interfaces.gateways.volume.VolumeRepository;
+import jp.co.myapp.interfaces.gateways.volume.create.IVolumeCreateView;
+import jp.co.myapp.interfaces.gateways.volume.create.IVolumeCreateViewModel;
+import jp.co.myapp.interfaces.gateways.volume.create.VolumeCreateViewModel;
+import jp.co.myapp.interfaces.presentation.user.create.UserCreatePresentor;
+import jp.co.myapp.interfaces.presentation.volume.create.VolumeCreatePresentor;
+import jp.co.myapp.usecases.user.IUserRepository;
+import jp.co.myapp.usecases.user.create.IUserCreatePresentor;
+import jp.co.myapp.usecases.user.create.IUserCreateUseCase;
+import jp.co.myapp.usecases.user.create.UserCreateUseCaseInteractor;
+import jp.co.myapp.usecases.volume.IVolumeRepository;
+import jp.co.myapp.usecases.volume.create.IVolumeCreatePresentor;
+import jp.co.myapp.usecases.volume.create.IVolumeCreateUseCase;
+import jp.co.myapp.usecases.volume.create.VolumeCreateUseCaseInteractor;
 
 public class Main {
+
 	public static void main(String[] args) {
-
-		IUserCreateView view = new UserCreateConsoleView();
-		UserCreateViewModel viewModel = new UserCreateViewModel();
-		viewModel.addObserver(view);
-		
-		UserCreatePresentor presentor = new UserCreatePresentor(viewModel);
-		UserRepository repo = new UserRepository();
-		IUserCreateUseCase useCase = new UserCreateUseCaseInteractor(repo, presentor);
-		
-		UserController controller = new UserController(useCase);
-		controller.createUser("test user");
-
+		// userCreateUseCase();
+		volumeCreateUseCase();
 	}
+
+	public static void userCreateUseCase() {
+		IUserCreateView view = new UserCreateConsoleView();
+		IUserCreateViewModel viewModel = (new UserCreateViewModel()).addObserver(view);
+		IUserCreatePresentor presentor = new UserCreatePresentor(viewModel);
+		IUserRepository repo = new UserRepository();
+		IUserCreateUseCase useCase = new UserCreateUseCaseInteractor(repo, presentor);
+
+		UserController controller = new UserController(useCase);
+		controller.createUser("user0001");
+	}
+
+	public static void volumeCreateUseCase() {
+		// IVolumeCreateView view = new VolumeCreateConsoleView();
+		IVolumeCreateView view = new VolumeCreateHTMLView();
+		IVolumeCreateViewModel viewModel = (new VolumeCreateViewModel()).addObserver(view);
+		IVolumeCreatePresentor presentor = new VolumeCreatePresentor(viewModel);
+		IVolumeRepository repo = new VolumeRepository();
+		IVolumeCreateUseCase useCase = new VolumeCreateUseCaseInteractor(repo, presentor);
+
+		VolumeController controller = new VolumeController(useCase);
+		controller.createVolume("stokuda", 1000);
+	}
+
 }

@@ -1,4 +1,4 @@
-package jp.co.myapp.useCases.user.create;
+package jp.co.myapp.usecases.user.create;
 
 import org.junit.Test;
 

@@ -1,4 +1,4 @@
-package jp.co.myapp.interfaces.gateways;
+package jp.co.myapp.interfaces.gateways.user.create;
 
 import java.util.ArrayList;
 import java.util.Iterator;
@@ -26,8 +26,9 @@ public class UserCreateViewModel implements IUserCreateViewModel{
 		this.userId = userId;
 	}
 	
-	public void addObserver(IUserCreateView observer) {
+	public IUserCreateViewModel addObserver(IUserCreateView observer) {
 		this.observers.add(observer);
+		return this;
 	}
 
 	public void notifyObservers() {

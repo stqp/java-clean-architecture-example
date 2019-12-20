@@ -1,16 +1,16 @@
 package jp.co.myapp.domain.entities.user;
 
+import lombok.Getter;
+import lombok.Setter;
+import lombok.experimental.Accessors;
 
+@Accessors(fluent = true)
+@Getter
+@Setter
 public class User {
-	String userId;
-    
-    public User(String userId) {
-    	this.userId = userId;
-    }
-	public void userId(String userId) {
+	private String userId;
+
+	public User(String userId) {
 		this.userId = userId;
-	}
-	public String userId() {
-		return this.userId;
 	}
 }

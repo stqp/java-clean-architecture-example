@@ -1,4 +1,4 @@
-package jp.co.myapp.usecases.user.create;
+package jp.co.myapp.application.user.create;
 
 import lombok.Getter;
 import lombok.Setter;

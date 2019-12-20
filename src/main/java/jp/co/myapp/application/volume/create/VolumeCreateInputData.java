@@ -1,4 +1,4 @@
-package jp.co.myapp.usecases.volume.create;
+package jp.co.myapp.application.volume.create;
 
 import lombok.Getter;
 import lombok.Setter;

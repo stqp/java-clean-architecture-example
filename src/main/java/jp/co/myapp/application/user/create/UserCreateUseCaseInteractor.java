@@ -1,7 +1,7 @@
-package jp.co.myapp.usecases.user.create;
+package jp.co.myapp.application.user.create;
 
+import jp.co.myapp.application.user.IUserRepository;
 import jp.co.myapp.domain.entities.user.User;
-import jp.co.myapp.usecases.user.IUserRepository;
 
 public class UserCreateUseCaseInteractor implements IUserCreateUseCase {
 

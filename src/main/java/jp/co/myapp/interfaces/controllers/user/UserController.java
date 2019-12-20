@@ -1,7 +1,7 @@
 package jp.co.myapp.interfaces.controllers.user;
 
-import jp.co.myapp.usecases.user.create.IUserCreateUseCase;
-import jp.co.myapp.usecases.user.create.UserCreateInputData;
+import jp.co.myapp.application.user.create.IUserCreateUseCase;
+import jp.co.myapp.application.user.create.UserCreateInputData;
 
 public class UserController {
 

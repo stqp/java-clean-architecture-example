@@ -1,8 +1,8 @@
 package jp.co.myapp.interfaces.presentation.volume.create;
 
+import jp.co.myapp.application.volume.create.IVolumeCreatePresentor;
+import jp.co.myapp.application.volume.create.VolumeCreateOutputData;
 import jp.co.myapp.interfaces.gateways.volume.create.IVolumeCreateViewModel;
-import jp.co.myapp.usecases.volume.create.IVolumeCreatePresentor;
-import jp.co.myapp.usecases.volume.create.VolumeCreateOutputData;
 
 public class VolumeCreatePresentor implements IVolumeCreatePresentor {
 

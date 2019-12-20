@@ -1,11 +1,11 @@
-package jp.co.myapp.usecases.volume.create;
+package jp.co.myapp.application.volume.create;
 
 import java.nio.charset.Charset;
 import java.util.Random;
 
+import jp.co.myapp.application.volume.IVolumeRepository;
 import jp.co.myapp.domain.entities.volume.Volume;
 import jp.co.myapp.domain.exceptions.volume.InvalidVolumeException;
-import jp.co.myapp.usecases.volume.IVolumeRepository;
 
 public class VolumeCreateUseCaseInteractor implements IVolumeCreateUseCase {
 

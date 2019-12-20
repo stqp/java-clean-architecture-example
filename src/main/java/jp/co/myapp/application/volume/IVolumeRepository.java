@@ -1,4 +1,4 @@
-package jp.co.myapp.usecases.volume;
+package jp.co.myapp.application.volume;
 
 import jp.co.myapp.domain.entities.volume.Volume;
 

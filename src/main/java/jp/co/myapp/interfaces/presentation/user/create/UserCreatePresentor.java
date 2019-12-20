@@ -1,8 +1,8 @@
 package jp.co.myapp.interfaces.presentation.user.create;
 
+import jp.co.myapp.application.user.create.IUserCreatePresentor;
+import jp.co.myapp.application.user.create.UserCreateOutputData;
 import jp.co.myapp.interfaces.gateways.user.create.IUserCreateViewModel;
-import jp.co.myapp.usecases.user.create.IUserCreatePresentor;
-import jp.co.myapp.usecases.user.create.UserCreateOutputData;
 
 public class UserCreatePresentor implements IUserCreatePresentor {
 

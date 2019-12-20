@@ -1,4 +1,4 @@
-package jp.co.myapp.usecases.user;
+package jp.co.myapp.application.user;
 
 import jp.co.myapp.domain.entities.user.User;
 

@@ -3,8 +3,8 @@ package jp.co.myapp.interfaces.gateways.user;
 import java.util.ArrayList;
 import java.util.Iterator;
 
+import jp.co.myapp.application.user.IUserRepository;
 import jp.co.myapp.domain.entities.user.User;
-import jp.co.myapp.usecases.user.IUserRepository;
 
 public class UserRepository implements IUserRepository {
 

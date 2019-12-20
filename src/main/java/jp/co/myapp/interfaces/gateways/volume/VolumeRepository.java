@@ -1,7 +1,7 @@
 package jp.co.myapp.interfaces.gateways.volume;
 
+import jp.co.myapp.application.volume.IVolumeRepository;
 import jp.co.myapp.domain.entities.volume.Volume;
-import jp.co.myapp.usecases.volume.IVolumeRepository;
 
 public class VolumeRepository implements IVolumeRepository {
 

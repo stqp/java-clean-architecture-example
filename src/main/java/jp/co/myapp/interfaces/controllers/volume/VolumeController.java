@@ -1,7 +1,7 @@
 package jp.co.myapp.interfaces.controllers.volume;
 
-import jp.co.myapp.usecases.volume.create.IVolumeCreateUseCase;
-import jp.co.myapp.usecases.volume.create.VolumeCreateInputData;
+import jp.co.myapp.application.volume.create.IVolumeCreateUseCase;
+import jp.co.myapp.application.volume.create.VolumeCreateInputData;
 
 public class VolumeController {
 	IVolumeCreateUseCase useCase;
